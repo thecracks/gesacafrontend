@@ -10,12 +10,12 @@ import { Movie } from '../interfaces/movie';
 })
 export class HomeComponent implements OnInit {
 
-  API_ENDPOINT = 'ASDF';
+  API_ENDPOINT = 'http://www.json-generator.com/api/json/get/bHTLhvGDxe?indent=1';
   movies: Movie[];
 
   constructor(private movieService: MoviesService, private httpClient: HttpClient) {
 
-    httpClient.get(this.API_ENDPOINT+'/movies').subscribe((data)=> {
+    httpClient.get(this.API_ENDPOINT).subscribe((data: Movie[])=> {
       this.movies = data;
       console.log(data);
     })
