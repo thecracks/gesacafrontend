@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.momentjs.com	TRUE	/	FALSE	1999999999	__cfduid	d15bc53edc2b7879949bab1d02a3e17431552519385
+.baidu.com	TRUE	/	FALSE	1999999999	BAIDUID	4CB46D14597947AC964523CC3D68DE0C:FG=1
+
