@@ -23,22 +23,17 @@
                             "src/assets"
                         ],
                         "styles": [
-                            "src/assets/css/all.min.css",
-                            "src/assets/css/argon.mine209.css",
-                            "src/assets/css/nucleo.css"
+                            "src/assets/css/bootstrap.min.css",
+                            "src/assets/css/themify-icons.css",
+                            "src/assets/css/icofont.css",
+                            "src/assets/css/flag-icon.min.css",
+                            "src/assets/css/component.css",
+                            "src/assets/css/style.css",
+                            "src/assets/css/amchart.css",
+                            "src/assets/css/style_1.css",
+                            "src/assets/css/color-1.css"
                         ],
                         "scripts": [
-                            "src/assets/js/jquery.min.js",
-                            "src/assets/js/bootstrap.bundle.min.js",
-                            "src/assets/js/js.cookie.js",
-                            "src/assets/js/jquery.scrollbar.min.js",
-                            "src/assets/js/jquery-scrollLock.min.js",
-                            "src/assets/js/jquery.lavalamp.min.js",
-                            "src/assets/js/Chart.min.js",
-                            "src/assets/js/Chart.extension.js",
-                            "src/assets/js/jquery-jvectormap.min.js",
-                            "src/assets/js/jquery-jvectormap-world-mill.js",
-                            "src/assets/js/argon.mine209.js" 
                         ],
                         "es5BrowserSupport": true
                     },
