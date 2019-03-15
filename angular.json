@@ -23,17 +23,35 @@
                             "src/assets"
                         ],
                         "styles": [
+                            "src/assets/vendors/css/vendors.min.css",
+                            "src/assets/vendors/css/extensions/unslider.css",
+                            "src/assets/vendors/css/weather-icons/climacons.min.css",
+                            "src/assets/fonts/meteocons/style.min.css",
+                            "src/assets/vendors/css/charts/morris.css",
                             "src/assets/css/bootstrap.min.css",
-                            "src/assets/css/themify-icons.css",
-                            "src/assets/css/icofont.css",
-                            "src/assets/css/flag-icon.min.css",
-                            "src/assets/css/component.css",
-                            "src/assets/css/style.css",
-                            "src/assets/css/amchart.css",
-                            "src/assets/css/style_1.css",
-                            "src/assets/css/color-1.css"
+                            "src/assets/css/bootstrap-extended.min.css",
+                            "src/assets/css/colors.min.css",
+                            "src/assets/css/components.min.css",
+                            "src/assets/css/core/menu/menu-types/vertical-menu-modern.css",
+                            "src/assets/css/core/colors/palette-gradient.min.css",
+                            "src/assets/fonts/simple-line-icons/style.min.css",
+                            "src/assets/css/pages/timeline.min.css"
+
                         ],
                         "scripts": [
+                            
+        
+                            "src/assets/vendors/js/vendors.min.js",
+                            "src/assets/vendors/js/charts/raphael-min.js",
+                            "src/assets/vendors/js/charts/morris.min.js",
+                            "src/assets/vendors/js/extensions/unslider-min.js",
+                            "src/assets/vendors/js/timeline/horizontal-timeline.js",
+                            "src/assets/js/core/app-menu.min.js",
+                            "src/assets/js/core/app.min.js",
+                            "src/assets/js/scripts/customizer.min.js",
+                            "src/assets/js/scripts/pages/dashboard-ecommerce.min.js"
+                            
+
                         ],
                         "es5BrowserSupport": true
                     },
