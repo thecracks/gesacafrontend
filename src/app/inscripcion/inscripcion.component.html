@@ -1,0 +1,71 @@
+<div class="row">
+    <ol class="breadcrumb">
+        <li><a href="#">
+                <em class="fa fa-home"></em>
+            </a></li>
+        <li class="active">Inscripción</li>
+    </ol>
+</div><!--/.row-->
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Inscripción</h1>
+    </div>
+</div><!--/.row-->
+
+<div class="panel panel-default">
+    <!--<div class="panel-heading">Forms</div>-->
+    <div class="panel-body">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Ingrese DNI</label>
+                <input (keydown)="onKeydown($event)" class="form-control" placeholder="Placeholder">
+            </div>
+            <button  type="button" class="btn btn-md btn-primary btn-block" data-toggle="modal" data-target="#exampleModalCenter">Buscar</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLongTitle">Alumno NO encontrado</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label>DNI</label>
+                    <input class="form-control" placeholder="Placeholder">
+                </div>
+
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input class="form-control" placeholder="Placeholder">
+                </div>
+                <div class="form-group">
+                    <label>Apellido Paterno</label>
+                    <input class="form-control" placeholder="Placeholder">
+                </div>
+                <div class="form-group">
+                    <label>Apellido Materno</label>
+                    <input class="form-control" placeholder="Placeholder">
+                </div>
+
+                <div class="form-group">
+                    <label>Teléfono</label>
+                    <input class="form-control" placeholder="Placeholder">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

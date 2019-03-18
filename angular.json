@@ -23,12 +23,10 @@
                             "src/assets"
                         ],
                         "styles": [
-
                             "src/assets/css/bootstrap.min.css",
                             "src/assets/css/font-awesome.min.css",
                             "src/assets/css/datepicker3.css",
                             "src/assets/css/styles.css"
-
                         ],
                         "scripts": [
 

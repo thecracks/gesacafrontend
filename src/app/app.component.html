@@ -99,25 +99,25 @@
                 </div>
             </form>
             <ul class="nav menu">
-                <li class="active"><a routerLink="/home" class="nav-link"><em class="fa fa-dashboard">&nbsp;</em> Home</a></li>
-                <li class="active"><a routerLink="/form" class="nav-link"><em class="fa fa-dashboard">&nbsp;</em> Form</a></li>
-                <li><a href="widgets.html"><em class="fa fa-calendar">&nbsp;</em> Widgets</a></li>
-                <li><a href="charts.html"><em class="fa fa-bar-chart">&nbsp;</em> Charts</a></li>
-                <li><a href="elements.html"><em class="fa fa-toggle-off">&nbsp;</em> UI Elements</a></li>
-                <li><a href="panels.html"><em class="fa fa-clone">&nbsp;</em> Alerts &amp; Panels</a></li>
+                <!--<li class="active"><a routerLink="/inscripcion" class="nav-link"><em class="fa fa-dashboard">&nbsp;</em> Registro</a></li>-->
+                <!--<li ><a routerLink="/matricula" class="nav-link"><em class="fa fa-dashboard">&nbsp;</em> Matrícula</a></li>-->
+                <!--<li><a href="widgets.html"><em class="fa fa-calendar">&nbsp;</em> Widgets</a></li>-->
+                <!--<li><a href="charts.html"><em class="fa fa-bar-chart">&nbsp;</em> Charts</a></li>-->
+                <!--<li><a href="elements.html"><em class="fa fa-toggle-off">&nbsp;</em> UI Elements</a></li>-->
+                <!--<li><a href="panels.html"><em class="fa fa-clone">&nbsp;</em> Alerts &amp; Panels</a></li>-->
+
+
                 <li class="parent "><a data-toggle="collapse" href="#sub-item-1">
-                        <em class="fa fa-navicon">&nbsp;</em> Multilevel <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
+                        <em class="fa fa-navicon">&nbsp;</em> Inicio <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
                     </a>
                     <ul class="children collapse" id="sub-item-1">
-                        <li><a class="" href="#">
-                                <span class="fa fa-arrow-right">&nbsp;</span> Sub Item 1
+                        <li><a class="" routerLink="/inscripcion">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Inscripción
                             </a></li>
-                        <li><a class="" href="#">
-                                <span class="fa fa-arrow-right">&nbsp;</span> Sub Item 2
+                        <li><a class="" routerLink="/matricula">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Matrícula
                             </a></li>
-                        <li><a class="" href="#">
-                                <span class="fa fa-arrow-right">&nbsp;</span> Sub Item 3
-                            </a></li>
+
                     </ul>
                 </li>
                 <li><a href="login.html"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
@@ -125,104 +125,86 @@
         </div><!--/.sidebar-->
 
         <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
-            <div class="row">
-                <ol class="breadcrumb">
-                    <li><a href="#">
-                            <em class="fa fa-home"></em>
-                        </a></li>
-                    <li class="active">Dashboard</li>
-                </ol>
-            </div><!--/.row-->
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Dashboard</h1>
-                </div>
-            </div><!--/.row-->
 
-            <div class="panel panel-container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <router-outlet></router-outlet>
-                    </div>
 
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Site Traffic Overview
-                            <ul class="pull-right panel-settings panel-button-tab-right">
-                                <li class="dropdown"><a class="pull-right dropdown-toggle" data-toggle="dropdown" href="#">
-                                        <em class="fa fa-cogs"></em>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li>
-                                            <ul class="dropdown-settings">
-                                                <li><a href="#">
-                                                        <em class="fa fa-cog"></em> Settings 1
-                                                    </a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="#">
-                                                        <em class="fa fa-cog"></em> Settings 2
-                                                    </a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="#">
-                                                        <em class="fa fa-cog"></em> Settings 3
-                                                    </a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span></div>
-                        <div class="panel-body">
-                            <div class="canvas-wrapper">
-                                <canvas class="main-chart" id="line-chart" height="200" width="600"></canvas>
+            <router-outlet></router-outlet>
+
+            <!--            <div class="row">
+                            <div class="col-md-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        Site Traffic Overview
+                                        <ul class="pull-right panel-settings panel-button-tab-right">
+                                            <li class="dropdown"><a class="pull-right dropdown-toggle" data-toggle="dropdown" href="#">
+                                                    <em class="fa fa-cogs"></em>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li>
+                                                        <ul class="dropdown-settings">
+                                                            <li><a href="#">
+                                                                    <em class="fa fa-cog"></em> Settings 1
+                                                                </a></li>
+                                                            <li class="divider"></li>
+                                                            <li><a href="#">
+                                                                    <em class="fa fa-cog"></em> Settings 2
+                                                                </a></li>
+                                                            <li class="divider"></li>
+                                                            <li><a href="#">
+                                                                    <em class="fa fa-cog"></em> Settings 3
+                                                                </a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span></div>
+                                    <div class="panel-body">
+                                        <div class="canvas-wrapper">
+                                            <canvas class="main-chart" id="line-chart" height="200" width="600"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--/.row-->
+                        </div>/.row-->
+
+            <!--            <div class="row">
+                            <div class="col-xs-6 col-md-3">
+                                <div class="panel panel-default">
+                                    <div class="panel-body easypiechart-panel">
+                                        <h4>New Orders</h4>
+                                        <div class="easypiechart" id="easypiechart-blue" data-percent="92" ><span class="percent">92%</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <div class="panel panel-default">
+                                    <div class="panel-body easypiechart-panel">
+                                        <h4>Comments</h4>
+                                        <div class="easypiechart" id="easypiechart-orange" data-percent="65" ><span class="percent">65%</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <div class="panel panel-default">
+                                    <div class="panel-body easypiechart-panel">
+                                        <h4>New Users</h4>
+                                        <div class="easypiechart" id="easypiechart-teal" data-percent="56" ><span class="percent">56%</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <div class="panel panel-default">
+                                    <div class="panel-body easypiechart-panel">
+                                        <h4>Visitors</h4>
+                                        <div class="easypiechart" id="easypiechart-red" data-percent="27" ><span class="percent">27%</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>/.row-->
 
             <div class="row">
-                <div class="col-xs-6 col-md-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body easypiechart-panel">
-                            <h4>New Orders</h4>
-                            <div class="easypiechart" id="easypiechart-blue" data-percent="92" ><span class="percent">92%</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-md-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body easypiechart-panel">
-                            <h4>Comments</h4>
-                            <div class="easypiechart" id="easypiechart-orange" data-percent="65" ><span class="percent">65%</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-md-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body easypiechart-panel">
-                            <h4>New Users</h4>
-                            <div class="easypiechart" id="easypiechart-teal" data-percent="56" ><span class="percent">56%</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-md-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body easypiechart-panel">
-                            <h4>Visitors</h4>
-                            <div class="easypiechart" id="easypiechart-red" data-percent="27" ><span class="percent">27%</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--/.row-->
-
-            <div class="row">
-                <div class="col-md-6">
+<!--                <div class="col-md-6">
                     <div class="panel panel-default chat">
                         <div class="panel-heading">
                             Chat
@@ -377,7 +359,7 @@
                                 </span></div>
                         </div>
                     </div>
-                </div><!--/.col-->
+                </div>/.col
 
 
                 <div class="col-md-6">
@@ -457,7 +439,7 @@
                             </ul>
                         </div>
                     </div>
-                </div><!--/.col-->
+                </div>/.col-->
                 <div class="col-sm-12">
                     <p class="back-link">Lumino Theme by <a href="https://www.medialoot.com">Medialoot</a></p>
                 </div>

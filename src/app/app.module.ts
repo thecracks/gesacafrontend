@@ -7,17 +7,23 @@ import { HomeComponent } from './home/home.component';
 import { FormComponent } from './form/form.component';
 import { Route, RouterModule } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { InscripcionComponent } from './inscripcion/inscripcion.component';
+import { MatriculaComponent } from './matricula/matricula.component';
 
 const routes: Route [] = [
   {path: 'home', component: HomeComponent},
   {path: 'form', component: FormComponent},
+  {path: 'inscripcion', component: InscripcionComponent},
+  {path: 'matricula', component: MatriculaComponent},
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    FormComponent
+    FormComponent,
+    InscripcionComponent,
+    MatriculaComponent
   ],
   imports: [
     BrowserModule,
