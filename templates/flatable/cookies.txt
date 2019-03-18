@@ -1,5 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-.phoenixcoded.net	TRUE	/	FALSE	1999999999	__cfduid	d22a8f79842957ba68156fd55bba443bc1552518449
-.amcharts.com	TRUE	/	FALSE	1999999999	__cfduid	d166938937125d44a812caa8fe71cc01a1552518992
-

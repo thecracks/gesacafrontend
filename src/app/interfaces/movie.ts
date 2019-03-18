@@ -1,10 +1,9 @@
 export interface Movie {
-    id?: number;
-    name: string;
-    description: string;
-    genre: string;
-    year: number;
-    duration: string;
-    created_at?: string;
-    updated_at?: string;
+    IdPersona?: number;
+    Nombre: string;
+    Paterno: string;
+    Materno: string;
+    Telefono: number;
+    Tipo: number;
+    Sub: number;
 }
