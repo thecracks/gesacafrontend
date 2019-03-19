@@ -9,6 +9,7 @@ import { Route, RouterModule } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { InscripcionComponent } from './inscripcion/inscripcion.component';
 import { MatriculaComponent } from './matricula/matricula.component';
+import {FormsModule} from '@angular/forms';
 
 const routes: Route [] = [
   {path: 'home', component: HomeComponent},
@@ -29,7 +30,8 @@ const routes: Route [] = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
