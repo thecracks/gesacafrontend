@@ -19,9 +19,9 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label>Ingrese DNI</label>
-                <input (keydown)="onKeydown($event)" class="form-control" placeholder="Placeholder">
+                <input  [(ngModel)]="movie.IdPersona"  (keydown)="onKeydown($event)" class="form-control" placeholder="Placeholder">
             </div>
-            <button  type="button" class="btn btn-md btn-primary btn-block" data-toggle="modal" data-target="#exampleModalCenter">Buscar</button>
+            <button (click)="cliqueando($event)" type="button" class="btn btn-md btn-primary btn-block" data-toggle="modal" data-target="#exampleModalCenter">Buscar</button>
         </div>
     </div>
 </div>
