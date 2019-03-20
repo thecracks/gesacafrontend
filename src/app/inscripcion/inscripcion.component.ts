@@ -15,7 +15,7 @@ export class InscripcionComponent implements OnInit {
 
   persona = {} as Persona;
   tituloModal: string;
-  inputDni: number;
+  inputDni: string;
 
   niveles: Nivel[];
   selectNivel: number;
@@ -45,7 +45,7 @@ export class InscripcionComponent implements OnInit {
       } else {
         this.tituloModal = 'Alumno NO Encontrado';
         this.persona = {} as Persona;
-        this.persona.IdPersona = this.inputDni;
+        this.persona.Dni = this.inputDni;
         this.editing = false;
       }
     }, (error) => {
@@ -57,6 +57,8 @@ export class InscripcionComponent implements OnInit {
   }
 
   guardarAlumno() {
+
+    console.log(this.persona);
 
     if (this.editing) {
       this.personasService.put(this.persona).subscribe((data: Singledata) => {

@@ -16,8 +16,8 @@ export class PersonasService {
     return this.httpClient.get(this.API_ENDPOINT + '/personas');
   }
 
-  getByDni(dni: number) {
-    return this.httpClient.get(this.API_ENDPOINT + '/personas/' + dni);
+  getByDni(dni: string) {
+    return this.httpClient.get(this.API_ENDPOINT + '/personas/dni/' + dni);
   }
 
   save(persona: Persona) {
