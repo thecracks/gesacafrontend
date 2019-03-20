@@ -1,71 +1,87 @@
 <div class="row">
-    <ol class="breadcrumb">
-        <li><a href="#">
-                <em class="fa fa-home"></em>
-            </a></li>
-        <li class="active">Inscripción</li>
-    </ol>
+  <ol class="breadcrumb">
+    <li><a href="#">
+      <em class="fa fa-home"></em>
+    </a></li>
+    <li class="active">Inscripción</li>
+  </ol>
 </div><!--/.row-->
 
 <div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Inscripción</h1>
-    </div>
+  <div class="col-lg-12">
+    <h1 class="page-header">Inscripción</h1>
+  </div>
 </div><!--/.row-->
 
 <div class="panel panel-default">
-    <!--<div class="panel-heading">Forms</div>-->
-    <div class="panel-body">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label>Ingrese DNI</label>
-                <input  [(ngModel)]="inputDni"  (keydown.enter)="buscarAlumno()" class="form-control" placeholder="Placeholder">
-            </div>
-            <button (click)="buscarAlumno()" type="button" class="btn btn-md btn-primary btn-block" data-toggle="modal" data-target="#exampleModalCenter">Buscar</button>
-        </div>
+  <!--<div class="panel-heading">Forms</div>-->
+  <div class="panel-body">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Ingrese DNI</label>
+        <input [(ngModel)]="inputDni" (keydown.enter)="buscarAlumno()" class="form-control" placeholder="Placeholder">
+      </div>
+      <button (click)="buscarAlumno()" type="button" class="btn btn-md btn-primary btn-block" data-toggle="modal"
+              data-target="#exampleModalCenter">Buscar
+      </button>
     </div>
+  </div>
 </div>
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="exampleModalLongTitle">{{tituloModal}}</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLongTitle">{{tituloModal}}</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
 
-                <div class="form-group">
-                    <label>DNI</label>
-                    <input [(ngModel)]="movie.IdPersona" class="form-control" placeholder="Placeholder">
-                </div>
-
-                <div class="form-group">
-                    <label>Nombre</label>
-                    <input [(ngModel)]="movie.Nombre" class="form-control" placeholder="Placeholder">
-                </div>
-                <div class="form-group">
-                    <label>Apellido Paterno</label>
-                    <input [(ngModel)]="movie.Paterno" class="form-control" placeholder="Placeholder">
-                </div>
-                <div class="form-group">
-                    <label>Apellido Materno</label>
-                    <input [(ngModel)]="movie.Materno" class="form-control" placeholder="Placeholder">
-                </div>
-
-                <div class="form-group">
-                    <label>Teléfono</label>
-                    <input [(ngModel)]="movie.Telefono" class="form-control" placeholder="Placeholder">
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button (click)="guardarAlumno()" type="button" class="btn btn-primary">Save changes</button>
-            </div>
+        <div class="form-group">
+          <label>DNI</label>
+          <input [(ngModel)]="persona.IdPersona" class="form-control" placeholder="Placeholder">
         </div>
+
+        <div class="form-group">
+          <label>Nombre</label>
+          <input [(ngModel)]="persona.Nombre" class="form-control" placeholder="Placeholder">
+        </div>
+        <div class="form-group">
+          <label>Apellido Paterno</label>
+          <input [(ngModel)]="persona.Paterno" class="form-control" placeholder="Placeholder">
+        </div>
+        <div class="form-group">
+          <label>Apellido Materno</label>
+          <input [(ngModel)]="persona.Materno" class="form-control" placeholder="Placeholder">
+        </div>
+
+        <div class="form-group">
+          <label>Teléfono</label>
+          <input [(ngModel)]="persona.Telefono" class="form-control" placeholder="Placeholder">
+        </div>
+
+
+<!--        <select [ngModel]="selectNivel">
+          <option *ngFor="let object of nivel" [ngValue]="object"
+                  [selected]="object.IdNivel === originalObject.uniqueId">{{object.name}}</option>
+        </select>-->
+
+<!--        <select type="number" [(ngModel)]="selectNivel" (ngModelChange)="toNumber()">
+          <option *ngFor="let nivel of niveles" [ngValue]="nivel.IdNivel"
+                  [selected]="nivel.IdNivel === persona.IdPersona">{{nivel.Descripcion}}</option>
+        </select>-->
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button (click)="guardarAlumno()" type="button" class="btn btn-primary">Save changes</button>
+      </div>
     </div>
+  </div>
 </div>

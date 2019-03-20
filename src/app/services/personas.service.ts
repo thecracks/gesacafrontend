@@ -1,11 +1,11 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Movie} from '../interfaces/movie';
+import {Persona} from '../interfaces/persona';
 
 @Injectable({
   providedIn: 'root'
 })
-export class MoviesService {
+export class PersonasService {
 
   API_ENDPOINT = 'http://localhost/gesacabackend/public/api';
 
@@ -20,8 +20,14 @@ export class MoviesService {
     return this.httpClient.get(this.API_ENDPOINT + '/personas/' + dni);
   }
 
-  save(movie: Movie) {
+  save(persona: Persona) {
     const headers = new HttpHeaders({'Content-Type': 'application/json'});
-    return this.httpClient.post(this.API_ENDPOINT + '/personas', movie, {headers: headers});
+    return this.httpClient.post(this.API_ENDPOINT + '/personas', persona, {headers: headers});
   }
+
+  put(persona: Persona) {
+    const headers = new HttpHeaders({'Content-Type': 'application/json'});
+    return this.httpClient.put(this.API_ENDPOINT + '/personas/' + persona.IdPersona, persona, {headers: headers});
+  }
+
 }

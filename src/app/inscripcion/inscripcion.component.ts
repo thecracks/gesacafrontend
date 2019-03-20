@@ -1,8 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {Movie} from '../interfaces/movie';
-import {MoviesService} from '../services/movies.service';
+import {Persona} from '../interfaces/persona';
+import {PersonasService} from '../services/personas.service';
 import {Multidata} from '../interfaces/multidata';
 import {Singledata} from '../interfaces/singledata';
+import {Nivel} from '../interfaces/nivel';
+import {NivelesService} from '../services/niveles.service';
 
 @Component({
   selector: 'app-inscripcion',
@@ -11,61 +13,77 @@ import {Singledata} from '../interfaces/singledata';
 })
 export class InscripcionComponent implements OnInit {
 
-  movie = {} as Movie;
-
-
+  persona = {} as Persona;
   tituloModal: string;
   inputDni: number;
 
-  constructor(private movieService: MoviesService) {
+  niveles: Nivel[];
+  selectNivel: number;
+  editing = false;
+
+  constructor(private  personasService: PersonasService, private nivelService: NivelesService) {
   }
 
   ngOnInit() {
+    this.nivelService.get().subscribe((data: Multidata) => {
+      this.niveles = data.data as Nivel[];
+      console.log(this.niveles);
+    }, (error) => {
+      console.log('no encontro :(');
+      console.log(error);
+    });
   }
 
   buscarAlumno() {
 
-    this.movieService.getByDni(this.inputDni).subscribe((data: Singledata) => {
+    this.personasService.getByDni(this.inputDni).subscribe((data: Singledata) => {
 
       if (data.code_status == '1') {
         this.tituloModal = 'Alumno Encontrado';
-        this.movie = data.data as Movie;
+        this.persona = data.data as Persona;
+        this.editing = true;
       } else {
         this.tituloModal = 'Alumno NO Encontrado';
-        this.movie = {} as Movie;
-        this.movie.IdPersona = this.inputDni;
+        this.persona = {} as Persona;
+        this.persona.IdPersona = this.inputDni;
+        this.editing = false;
       }
-
     }, (error) => {
-      console.log('no encontro :(');
-
-      console.log(this.movie);
+      console.log(error);
       this.tituloModal = 'Alumno NO Encontrado';
-    });
+      this.editing = false;
 
+    });
   }
 
   guardarAlumno() {
 
-    this.movie.Sub = 1;
-    this.movie.Tipo = 1;
+    if (this.editing) {
+      this.personasService.put(this.persona).subscribe((data: Singledata) => {
+        if (data.code_status == '1') {
+          console.log('Alumno Actualizado');
+        } else {
+          console.log('No se pudo guardar');
+        }
+      }, (error) => {
+        console.log('No se pudo actualizar');
+        console.log(error);
+      });
 
-    this.movieService.save(this.movie).subscribe((data: Singledata) => {
+    } else {
 
-      if (data.code_status == '1') {
-        console.log('Alumno guardado');
-
-      } else {
+      this.personasService.save(this.persona).subscribe((data: Singledata) => {
+        if (data.code_status == '1') {
+          console.log('Alumno guardado');
+        } else {
+          console.log('No se pudo guardar');
+        }
+      }, (error) => {
         console.log('No se pudo guardar');
+        console.log(error);
+      });
 
-      }
-
-    }, (error) => {
-      console.log('No se pudo guardar');
-      this.tituloModal = 'Alumno NO Encontrado';
-    });
-
-
+    }
   }
 
   onKeydown(event) {
